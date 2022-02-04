@@ -1,9 +1,10 @@
 <div>
-  <h1>lady Quotes</h1>
-  <p>Like words she runs deep!</p>
+  <h1>Lady Quotes</h1>
+  <p>Just like words she runs deep!</p>
+  <hr>
   <ul>
-    <li ngFor='let quote of quotes'>
-      {{quotes}}
-    </li>
+      <li *ngFor='let quote of quotes'>
+        {{quote.name}}
+      </li>
   </ul>
 </div>
