@@ -8,9 +8,17 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    { id: 1, name: 'Be the flame, not the moth' , author: 'Casanova'},
-    { id: 2, name: 'Above all, be the heroine of your life, not the victim.', author: 'Nora Ephron'},
+    new Quote(1, 'Be the flame, not the moth', 'Casanova'),
+    new Quote(
+      2,
+      'Above all, be the heroine of your life, not the victim.',
+      'Nora Ephron'
+    ),
   ];
+
+  toggleDetails(index: number) {
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
   constructor() {}
 
   ngOnInit(): void {}

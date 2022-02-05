@@ -3,9 +3,14 @@
   <p>Just like words she runs deep!</p>
   <hr>
   <ul>
-      <li *ngFor='let quote of quotes'>
-         {{quote.name}}
-         <app-quote-author [quot]='quote'></app-quote-author>
+    <div *ngFor='let quote of quotes; let i=index'>
+      <li>
+        {{quote.name}}
       </li>
+      <button (click)='toggleDetails(i)'>Show author</button>
+      <app-quote-author *ngIf='quote.showAuthor' [quot]='quote'></app-quote-author>
+
+    </div>
+
   </ul>
 </div>
