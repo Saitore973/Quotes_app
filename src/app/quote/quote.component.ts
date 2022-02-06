@@ -11,14 +11,14 @@ export class QuoteComponent implements OnInit {
     new Quote(
       1,
       'Be the flame, not the moth',
-      'Casanova',
-      new Date(2020, 3, 14)
+      'Casanova', 'Saitore', 
+      new Date(2020, 3, 14), 
     ),
     new Quote(
       2,
       'Above all, be the heroine of your life, not the victim.',
-      'Nora Ephron',
-      new Date(2020, 3, 14)
+      'Nora Ephron', 'Saitore', 
+      new Date(2020, 3, 14), 
     ),
   ];
 

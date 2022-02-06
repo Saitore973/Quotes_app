@@ -10,7 +10,7 @@
           <li>
             {{quote.name}}
           </li>
-          <p>posted on {{quote.postDate|date}}</p>
+          <p>posted on {{quote.postDate|date}}   </p>
           <button (click)='toggleDetails(i)'>Show author</button>
           <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete)='deleteQuote($event,i)'>
           </app-quote-author>
