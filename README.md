@@ -1,3 +1,42 @@
+## Name of the project
+
+Quotes app
+
+## Author
+
+Saitore Virginia
+
+
+## Project Description
+
+This is a quote generator application which allows the user to add quote, upvote or downvote a quote as well as delete if need be.
+
+
+
+## Technologies Used
+* TypeScript
+*Angular cli
+* HTML
+* CSS
+* Javascript
+* Bootstrap
+
+
+## LiveLink
+
+
+## Known Bugs 
+
+There are no known bugs at the moment but if any spotted you can reach our group leader daniel.njoroge@student.moringaschool.com
+
+## Setup and installation requirements
+
+* Go to the repo at https://github.com/Saitore973/Quotes_app.git;
+* Clone the repo;
+* cd to the project then go live.
+
+
+
 # Quotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
@@ -25,3 +64,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Licence
+
+[MIT License](./LICENSE)
+
+Copyright (c) 2021 
+
