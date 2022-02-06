@@ -19,7 +19,7 @@ export class QuoteComponent implements OnInit {
       2,
       'Above all, be the heroine of your life, not the victim.',
       'Nora Ephron', 'Saitore', 
-      new Date(2020, 3, 14), 
+      new Date(2022, 1, 1), 
     ),
   ];
 

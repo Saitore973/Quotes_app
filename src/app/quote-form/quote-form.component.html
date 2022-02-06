@@ -6,7 +6,7 @@
     <div class="form-group">
 
       <label for="description">Quote</label>
-      <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required></textarea>
+      <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required></textarea> <br> 
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
         <p>Name is required</p>
       </div>
@@ -16,7 +16,7 @@
 
       <label for="name">Author</label>
       <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #author='ngModel'
-        required>
+        required> <br>
       <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Author is required</p>
       </div>
@@ -29,7 +29,7 @@
 
       <label for="name">Posted by,</label>
       <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.submitBy" name="submitBy" #submitBy='ngModel'
-        required>
+        required> <br> 
         <div [hidden]="submitBy.valid || submitBy.pristine" class="alert alert-danger">
         <p>Name is required</p>
       </div>
@@ -38,13 +38,13 @@
     <div class="form-group">
       <label for="complete">Date Posted</label>
       <input type='date' id="complete"  [(ngModel)]="newQuote.postDate" name="postDate" #postDate='ngModel'
-        required>
+        required> <br>
         <div [hidden]="postDate.valid || postDate.pristine" class="alert alert-danger">
         <p>Date is required</p>
       </div>
 
 
-    </div>
+    </div> <br>
     <button type="submit" >Add quote</button>
   </form>
 </div>

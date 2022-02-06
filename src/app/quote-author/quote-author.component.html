@@ -11,8 +11,8 @@
 <p>Since the quote was posted it has been {{quot.postDate|dateCount}} days </p>
 
  
- <p> <fa-icon [icon]="faCoffee" (click) ="addUps()" ></fa-icon> {{vote}}</p>
- <p><fa-icon [icon]="faCoffee" (click) ="addDowns()" ></fa-icon>{{down}}
+ <p> Like<fa-icon [icon]="faCoffee" (click) ="addUps()" ></fa-icon> {{vote}}</p>
+ <p> Dislike <fa-icon [icon]="faCoffee" (click) ="addDowns()" ></fa-icon>{{down}}
 </p>
 <button class="btn btn-outline-danger" (click)='quoteDelete(true)'> Delete Goal</button>
 
