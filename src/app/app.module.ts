@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteAuthorComponent } from './quote-author/quote-author.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
-    QuoteAuthorComponent
+    QuoteAuthorComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

@@ -5,8 +5,9 @@
   <ul>
     <div *ngFor='let quote of quotes; let i=index'>
       <li>
-        {{quote.name}} due on {{quote.postDate|date}}
+        {{quote.name}} 
       </li>
+      <p>posted on {{quote.postDate|date}}</p>
       <button (click)='toggleDetails(i)'>Show author</button>
       <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-author>
 
