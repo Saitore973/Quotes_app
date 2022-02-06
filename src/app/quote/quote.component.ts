@@ -38,6 +38,13 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  addNewQuote(quote: Quote) {
+    let goalLength = this.quotes.length;
+    quote.id = goalLength + 1;
+    quote.postDate = new Date(quote.postDate);
+    this.quotes.push(quote);
+  }
+
   completeGoal(isComplete: any, index: number) {
     if (isComplete) {
       this.quotes.splice(index, 1);
