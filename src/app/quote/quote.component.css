@@ -1,0 +1,14 @@
+.app{
+  background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+   color: white;
+   padding: 40px;
+}
+h1{
+   text-align: center;
+   color: rgb(179, 125, 230);
+}
+.just{
+   text-align: center;
+   font-style: italic;
+   
+}
