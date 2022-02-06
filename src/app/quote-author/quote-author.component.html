@@ -1,9 +1,11 @@
 <p>{{quot.author}}</p>
+<p>Since the quote was posted it has been {{quot.postDate|dateCount}} days </p>
+
  
  <p> <fa-icon [icon]="faCoffee" (click) ="addUps()" ></fa-icon> {{vote}}</p>
  <p><fa-icon [icon]="faCoffee" (click) ="addDowns()" ></fa-icon>{{down}}
 </p>
-<button  (click)= 'quoteDelete(true)' >Delete Quote</button>
+<button  (click)='quoteDelete(true)'> Delete Goal</button>
 
 
 
