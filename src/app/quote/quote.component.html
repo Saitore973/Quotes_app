@@ -2,17 +2,27 @@
   <h1>Lady Quotes</h1>
   <p>Just like words she runs deep!</p>
   <hr>
-  <ul>
-    <div *ngFor='let quote of quotes; let i=index'>
-      <li>
-        {{quote.name}} 
-      </li>
-      <p>posted on {{quote.postDate|date}}</p>
-      <button (click)='toggleDetails(i)'>Show author</button>
-      <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-author>
-      
 
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <div *ngFor='let quote of quotes; let i=index'>
+          <li>
+            {{quote.name}}
+          </li>
+          <p>posted on {{quote.postDate|date}}</p>
+          <button (click)='toggleDetails(i)'>Show author</button>
+          <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete)='deleteQuote($event,i)'>
+          </app-quote-author>
+
+
+        </div>
+
+      </ul>
     </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div>
+  </div>
 
-  </ul>
 </div>
