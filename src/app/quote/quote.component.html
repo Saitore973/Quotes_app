@@ -9,24 +9,32 @@
   <div class="row">
     <div class="col-md-6">
       <h2>
-        Ladies are very important beings in our society. <br> Goes without saying! Think about your Mother, <br> Sister, Daughter, Significant half or that <br> special lady in your life. What quote <br> best describes her?  <br>  Share !
+        Ladies are very important beings in our society. <br> Goes without saying! Think about your Mother, <br> Sister,
+        Daughter, Significant half or that <br> special lady in your life. What quote <br> best describes her? <br>
+        Share !
       </h2>
       <hr>
       <ul>
         <div class="quotes" *ngFor='let quote of quotes; let i=index'>
           <li>
             <h3>
-                {{quote.name}}
+              {{quote.name}}
             </h3>
-          
+            <h3 appHighlight *ngIf='highestUpVote()===quote.upVote'>
+              {{quote.name}}
+            </h3>
+
+
           </li>
           <p>Posted on {{quote.postDate|date}} </p>
           <button class="btn btn-outline-primary" (click)='toggleDetails(i)'>Show author</button>
-          <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete)='deleteQuote($event,i)'>
+          <app-quote-author *ngIf='quote.showAuthor' [quot]='quote' (isComplete)='deleteQuote($event,i)' (upThisVote)='addUpVote($event, i)' (downThisVote)= 'addDownVote($event, i)'>
           </app-quote-author>
 
-
+          <!-- <app-quote-author></app-quote-author> -->
+          
         </div>
+      
 
       </ul>
     </div>

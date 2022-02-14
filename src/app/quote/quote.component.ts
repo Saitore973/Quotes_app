@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 @Component({
@@ -12,16 +15,32 @@ export class QuoteComponent implements OnInit {
     new Quote(
       1,
       'Be the flame, not the moth',
-      'Casanova', 'Saitore', 
-      new Date(2020, 3, 14), 
+      'Casanova',
+      'Saitore',
+
+      new Date(2020, 3, 14),
+      0,
+      0
     ),
     new Quote(
       2,
       'Above all, be the heroine of your life, not the victim.',
-      'Nora Ephron', 'Saitore', 
-      new Date(2022, 1, 1), 
+      'Nora Ephron',
+      'Saitore',
+
+      new Date(2022, 1, 1),
+      0,
+      0
     ),
   ];
+
+  vote = 0;
+
+  down = 0;
+
+  preNum!: number;
+  lastNum!: number;
+  counter!: number;
 
   toggleDetails(index: number) {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
@@ -46,6 +65,32 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  addUpVote(upThisVote: boolean, index: number) {
+    if (upThisVote) {
+      this.quotes[index].upVote++;
+    }
+  }
+
+  addDownVote(downThisVote: boolean, index: number) {
+    if (downThisVote) {
+      this.quotes[index].downVote--;
+    }
+  }
+
+  highestUpVote() {
+    let highArray = [];
+
+    for (let i = 0; i < this.quotes.length; i++) {
+      highArray.push(this.quotes[i].upVote);
+    }
+    let highestVote = Math.max(...highArray);
+    if (highestVote === 0) {
+      return 1;
+    } else {
+      return highestVote;
+    }
+  }
+
   completeGoal(isComplete: any, index: number) {
     if (isComplete) {
       this.quotes.splice(index, 1);
@@ -55,3 +100,7 @@ export class QuoteComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+
+
+
+ 

@@ -13,24 +13,25 @@ export class QuoteAuthorComponent implements OnInit {
   @Input() quot!: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  vote = 0;
-
-  down = 0;
-
   quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
 
+  @Output() upThisVote = new EventEmitter<boolean>();
+
+  upTheVote(up: boolean) {
+    this.upThisVote.emit(up);
+  }
+
+  @Output() downThisVote = new EventEmitter<boolean>();
+
+  downTheVote(down: boolean) {
+    this.downThisVote.emit(down);
+  }
   constructor() {}
 
   ngOnInit(): void {}
-
-  addUps() {
-    this.vote = this.vote + 1;
-  }
-
-  addDowns() {
-    this.down = this.down + 1;
-  }
 }
+
+
 
