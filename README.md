@@ -24,10 +24,11 @@ This is a quote generator application which allows the user to add quote, upvote
 
 ## LiveLink
 
+https://saitore973.github.io/Quotes_app/
 
 ## Known Bugs 
 
-There are no known bugs at the moment but if any spotted you can reach our group leader daniel.njoroge@student.moringaschool.com
+There are no known bugs at the moment but if any spotted you can reach to me via saitorevg@gmail.com
 
 ## Setup and installation requirements
 
